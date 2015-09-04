@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Reddit miner</title>
+  <link rel="stylesheet" type="text/css" href="minerStyle.css">
+  <script src="jquery-1.11.3.js"></script>
+  <script src="le_pop.js"></script>
+  <script src="nono.js"></script>
+  <script src="htmlMagic.js"></script>
+</head>
+
+<body>
+  <form action="javascript:redditMiner()">
+    <label for="Subreddit">Subreddit</label>
+    <input type="textbox" name="Subreddit" id="Subreddit" value="Sweden">
+    <label for="commonFilter">Ta bort "fel" ord</label>
+    <input type="checkbox" id="commonFilter">
+    <input type="submit" value="Sök subreddit">
+  </form>
+  <br>
+  <a href="nono.js" id="nonoLink">Fel ord-lista</a>
+  <br>
+  <a href="http://www.github.com" id="nonoLink">Github</a>
+  <hr>
+  <div id='table'></div>
+
+  <script>
+    $('#Subreddit').keyup(function(event) {
+      if (event.keyCode == 13) {
+        $('#Knapp').click();
+      }
+    });
+
+    function redditMiner() {
+      runRedditSniffer(document.getElementById('Subreddit').value);
+    };
+  </script>
+</body>
+
+</html>
