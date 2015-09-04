@@ -12,3 +12,7 @@ th {
 body {
     background-color: linen;
 }
+
+p#stats {
+  text-align: center;
+}

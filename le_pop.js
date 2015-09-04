@@ -80,6 +80,9 @@ extractWords = function() {
   }
   console.log("Total words: " + words.length);
 
+  document.getElementById("stats").innerHTML = "Totalt antal titlar och kommentarer: "
+  + posts.length + "<br>Totalt antal ord: " + words.length;
+
   occurrences = countThem(words);
 
   filter = document.getElementById('Filter');
