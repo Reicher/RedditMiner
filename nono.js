@@ -29748,8 +29748,6 @@ BigNoNo =
 "laughter",
 "lyriska",
 "leta",
-"
-",
 "fast",
 "Förbund",
 "hårfin",
