@@ -122,7 +122,6 @@ BigNoNo =
 "innan",
 "som",
 "tycker",
-""",
 "Så",
 "mitt",
 "allt",
