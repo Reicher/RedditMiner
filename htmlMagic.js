@@ -8,11 +8,19 @@ createTable = function(array){
   tr.appendChild(col);
 
   col = document.createElement('th');
-  col.appendChild(document.createTextNode("Ord"));
+  col.appendChild(document.createTextNode("Substantiv"));
   tr.appendChild(col);
 
   col = document.createElement('th');
-  col.appendChild(document.createTextNode("Antal"));
+  col.appendChild(document.createTextNode("Verb"));
+  tr.appendChild(col);
+
+  col = document.createElement('th');
+  col.appendChild(document.createTextNode("Adjektiv"));
+  tr.appendChild(col);
+
+  col = document.createElement('th');
+  col.appendChild(document.createTextNode("Okänd"));
   tr.appendChild(col);
 
   theTable.appendChild(tr);
@@ -26,18 +34,21 @@ createTable = function(array){
       num.appendChild(document.createTextNode(pos));
       tr.appendChild(num);
 
-      // För att ta bort massa jobbiga ord
-      /*word = document.createElement('td');
-      word.appendChild(document.createTextNode('"' + array[i].word + '",'));
-      tr.appendChild(word);*/
+      noun = document.createElement('td');
+      noun.appendChild(document.createTextNode(" "));
+      tr.appendChild(noun);
 
-      word = document.createElement('td');
-      word.appendChild(document.createTextNode(array[i].word));
-      tr.appendChild(word);
+      verb = document.createElement('td');
+      verb.appendChild(document.createTextNode(" "));
+      tr.appendChild(verb);
 
-      count = document.createElement('td');
-      count.appendChild(document.createTextNode(array[i].count));
-      tr.appendChild(count);
+      adjective = document.createElement('td');
+      adjective.appendChild(document.createTextNode(" "));
+      tr.appendChild(adjective);
+
+      unknown = document.createElement('td');
+      unknown.appendChild(document.createTextNode(array[i].word + " (" + array[i].count + ")"));
+      tr.appendChild(unknown);
 
       theTable.appendChild(tr);
   }

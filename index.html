@@ -12,20 +12,31 @@
 </head>
 
 <body>
-  <form action="javascript:redditMiner()">
-    <label for="Subreddit">Subreddit</label>
-    <input type="textbox" name="Subreddit" id="Subreddit" value="Sweden">
-    <label for="commonFilter">Ta bort "fel" ord</label>
-    <input type="checkbox" id="commonFilter">
-    <input type="submit" value="Sök subreddit">
-  </form>
-  <br>
-  <a href="nono.js" id="nonoLink">Fel ord-lista</a>
-  <br>
-  <a href="https://github.com/Reicher/RedditMiner.git" id="nonoLink">Github</a>
-  <hr>
-  <p id="stats"></p>
-  <div id='table'></div>
+  <div id="wrapper">
+    <div id="header">Reddit miner</div>
+    <div id="settings">
+      <div id="search">
+        <form action="javascript:redditMiner()">
+          <label for="Subreddit">Subreddit</label>
+          <input id="Subreddit" type="textbox" name="Subreddit" value="Sweden">
+          <input type="submit" value="Sök subreddit">
+        </form>
+      </div>
+      <div id="filter">
+        <label id="CommonFilterLabel" for="commonFilter">Ta bort "fel" ord</label>
+        <input id="commonFilter" type="checkbox">
+      </div>
+    </div>
+    <div id="content">
+      <p id="stats"></p>
+      <div id='table'></div>
+    </div>
+    <div id="footer">
+      <a href="nono.js" id="nonoLink">Fel ord-lista</a>
+      <a href="https://github.com/Reicher/RedditMiner.git" id="nonoLink">Github</a>
+      <a href="Builder/builder.html">Builder</a>
+    </div>
+  </div>
 
   <script>
     $('#Subreddit').keyup(function(event) {
